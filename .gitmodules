@@ -1,3 +1,6 @@
 [submodule "kernel"]
 	path = kernel
 	url = git@gitlab.com:potatos-project/kernel.git
+[submodule "tools/mkfs.bobfs"]
+	path = tools/mkfs.bobfs
+	url = git@gitlab.com:potatos-project/mkfs.bobfs.git
