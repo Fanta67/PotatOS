@@ -4,3 +4,6 @@
 [submodule "tools/mkfs.bobfs"]
 	path = tools/mkfs.bobfs
 	url = git@gitlab.com:potatos-project/mkfs.bobfs.git
+[submodule "tools/bfg9k"]
+	path = tools/bfg9k
+	url = git@gitlab.com:potatos-project/bfg9k.git
