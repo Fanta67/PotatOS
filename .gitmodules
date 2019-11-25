@@ -1,15 +1,15 @@
 [submodule "kernel"]
 	path = kernel
-	url = git@gitlab.com:potatos-project/kernel.git
+	url = ../../potatos-project/kernel.git
 [submodule "tools/mkfs.bobfs"]
 	path = tools/mkfs.bobfs
-	url = git@gitlab.com:potatos-project/mkfs.bobfs.git
+	url = ../../potatos-project/mkfs.bobfs.git
 [submodule "tools/bfg9k"]
 	path = tools/bfg9k
-	url = git@gitlab.com:potatos-project/bfg9k.git
+	url = ../../potatos-project/bfg9k.git
 [submodule "user"]
 	path = user
-	url = git@gitlab.com:potatos-project/user.git
+	url = ../../potatos-project/user.git
 [submodule "tests"]
 	path = tests
-	url = git@gitlab.com:potatos-project/tests.git
+	url = ../../potatos-project/tests.git
