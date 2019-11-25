@@ -7,3 +7,6 @@
 [submodule "tools/bfg9k"]
 	path = tools/bfg9k
 	url = git@gitlab.com:potatos-project/bfg9k.git
+[submodule "user"]
+	path = user
+	url = git@gitlab.com:potatos-project/user.git
