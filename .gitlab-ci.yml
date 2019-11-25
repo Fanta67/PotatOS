@@ -3,12 +3,8 @@ before_script:
     - uname -a
     - printenv | sort
 
-gcc:
-    image: albertluu/potatos
+test:
+    image: docker:latest
     script:
-    - ls -al
-    - cat makefile
-    - make versions
-    - make clean
-    - make run
-    - make -r check
+    - apk add --no-cache make
+    - make ci-test
