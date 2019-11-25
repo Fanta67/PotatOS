@@ -1,5 +1,6 @@
 variables:
     GIT_SUBMODULE_STRATEGY: recursive
+    DOCKER_TLS_CERTDIR: '' # obscure issue
 
 test:
     image: docker:latest
