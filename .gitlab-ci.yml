@@ -1,7 +1,5 @@
 before_script:
-    - date
-    - uname -a
-    - printenv | sort
+    git pull --recurse-submodules
 
 test:
     image: docker:latest
