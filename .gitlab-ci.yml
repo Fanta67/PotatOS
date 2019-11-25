@@ -2,9 +2,14 @@ image: docker:18-dind
 
 variables:
     GIT_SUBMODULE_STRATEGY: recursive
+    DOCKER_DRIVER: 'overlay2'
     DOCKER_TLS_CERTDIR: '' # obscure issue
 
+before_script:
+    - docker info
+
 test:
+    stage: test
     script:
         - apk add --no-cache make
         - make ci-test
