@@ -1,9 +1,8 @@
-image: docker:18-dind
+image: docker:19.03.0-dind
 
 variables:
     GIT_SUBMODULE_STRATEGY: recursive
     DOCKER_DRIVER: 'overlay2'
-    DOCKER_HOST: tcp://docker:2375/
     DOCKER_TLS_CERTDIR: '' # obscure issue
 
 before_script:
