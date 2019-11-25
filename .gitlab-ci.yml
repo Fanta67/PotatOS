@@ -1,5 +1,5 @@
 before_script:
-    git pull --recurse-submodules
+    - git pull --recurse-submodules
 
 test:
     image: docker:latest
