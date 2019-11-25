@@ -1,6 +1,5 @@
-before_script:
-    - git pull --recurse-submodules
-
+variables:
+    - GIT_SUBMODULE_STRATEGY: recursive
 test:
     image: docker:latest
     script:
