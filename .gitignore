@@ -252,3 +252,6 @@ $RECYCLE.BIN/
 
 *.d
 *.bin
+
+# default BFG9K output directory
+out/

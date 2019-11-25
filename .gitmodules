@@ -10,3 +10,6 @@
 [submodule "user"]
 	path = user
 	url = git@gitlab.com:potatos-project/user.git
+[submodule "tests"]
+	path = tests
+	url = git@gitlab.com:potatos-project/tests.git
