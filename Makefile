@@ -10,5 +10,8 @@ test:
 report: test
 	bfg9k report
 
+clean:
+	bfg9k clean
+
 ci-test: build-container
 	docker run --rm --name potatoes --mount type=bind,source=`pwd`,target=/potatos potatos make report
