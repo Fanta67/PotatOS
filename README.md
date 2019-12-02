@@ -24,14 +24,18 @@ You won't need to run `make build-container` again until the `Dockerfile` is upd
 In general, PotatOS's kernel should be built by:
 
 ```
+# start the docker container and enter the shell
+make stack
+
 # making a new directory in `kernel`
 mkdir -p kernel/build
 
 # and using a subshell to do the build
-(cd kernel && cmake .. && make)
+(cd kernel/build && cmake .. && make)
 ```
 
 You'll find `kernel.img` in `kernel/build`.
+You can run using `./run_qemu <disk image name>` but there is no user mode image yet.
 
 # Source Control
 
