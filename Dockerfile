@@ -1,18 +1,18 @@
 FROM ubuntu:bionic
 
 ADD . /potatos
-WORKDIR /potatos
 
-RUN apt-get update
-RUN apt-get install build-essential gcc-multilib g++-multilib qemu qemu-system python3 python3-pip cmake -yqq
-
-# set up BFG9K
-RUN pip3 install click
-RUN ln -s /potatos/tools/bfg9k/bfg9k /usr/bin/bfg9k
-RUN chmod +x /usr/bin/bfg9k
+RUN sh /potatos/scripts/00-install-deps.sh
+RUN sh /potatos/scripts/10-install-bfg9k.sh
 
 # click trick
 ENV LC_ALL=C.UTF-8
 ENV export LANG=C.UTF-8
+
+# set up automake/autoconf for newlib
+RUN sh /potatos/scripts/20-install-newlib-deps.sh
+ENV PATH=/root/tools/bin:$PATH
+
+WORKDIR /potatos
 
 CMD [ "sh", "-c", "bash" ]
