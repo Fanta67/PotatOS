@@ -5,6 +5,12 @@ To develop PotatOS, clone this repo with
 git clone git@gitlab.com:potatos-project/potatos.git --recurse-submodules
 ```
 
+To update submodules or to get them if you already cloned
+
+```
+git submodule update --init --recurse
+```
+
 All development work should be done inside Docker. You can build the container you need to develop with
 
 ```
@@ -25,16 +31,19 @@ In general, PotatOS's kernel should be built by:
 
 ```
 # start the docker container and enter the shell
+# should be run inside the root directory of the metarepo
 make stack
 
-# making a new directory in `kernel`
+# once inside the docker shell
+# make a new directory in `kernel`
 mkdir -p kernel/build
 
-# and using a subshell to do the build
+# use a subshell to do the build
 (cd kernel/build && cmake .. && make)
 ```
 
 You'll find `kernel.img` in `kernel/build`.
+
 You can run using `./run_qemu <disk image name>` but there is no user mode image yet.
 
 # Source Control
