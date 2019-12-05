@@ -3,7 +3,7 @@ build-container:
 
 stack:
 	xhost +local: 
-	docker run -it --rm --name potatoes --net=host --env="DISPLAY" --volume="${HOME}/.Xauthority:/root/.Xauthority:rw" --mount type=bind,source=`pwd`,target=/potatos potatos
+	docker run -it --rm --name potatoes --privileged --env="DISPLAY" --volume="${HOME}/.Xauthority:/root/.Xauthority:rw" --mount type=bind,source=`pwd`,target=/potatos potatos
 
 test:
 	bfg9k run tests/*
@@ -15,4 +15,4 @@ clean:
 	bfg9k clean
 
 ci-test: build-container
-	docker run --rm --name potatoes --mount type=bind,source=`pwd`,target=/potatos potatos make report
+	docker run --rm --name potatoes --privileged --mount type=bind,source=`pwd`,target=/potatos potatos make report

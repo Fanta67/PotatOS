@@ -12,7 +12,7 @@ ENV LANG=C.UTF-8
 RUN sh /potatos/scripts/20-fuck-larry-wall.sh
 
 # set up automake/autoconf for newlib
-RUN sh /potatos/scripts/20-install-newlib-deps.sh
+RUN sh /potatos/scripts/30-install-newlib-deps.sh
 ENV PATH=/root/tools/bin:$PATH
 
 WORKDIR /potatos
