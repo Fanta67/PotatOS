@@ -3,6 +3,10 @@
         "types.h": "c",
         "stdio.h": "c",
         "libc.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "windows.h": "c",
+        "stdint.h": "c",
+        "doomgeneric.h": "c",
+        "stat.h": "c"
     }
 }
