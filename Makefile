@@ -2,7 +2,8 @@ build-container:
 	docker build -t potatos .
 
 stack:
-	docker run -it --rm --name potatoes --mount type=bind,source=`pwd`,target=/potatos potatos
+	xhost +local: 
+	docker run -it --rm --name potatoes --net=host --env="DISPLAY" --volume="${HOME}/.Xauthority:/root/.Xauthority:rw" --mount type=bind,source=`pwd`,target=/potatos potatos
 
 test:
 	bfg9k run tests/*
